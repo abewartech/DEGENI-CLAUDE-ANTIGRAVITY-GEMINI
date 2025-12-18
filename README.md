@@ -1,3 +1,11 @@
+<h1 align="center">DEGENI – Claude + Gemini AI Terminal</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/bicknicktick/DEGENI-CLAUDE-ANTIGRAVITY-GEMINI?style=for-the-badge&amp;color=06b6d4" alt="Release Version">
+  <img src="https://img.shields.io/github/license/bicknicktick/DEGENI-CLAUDE-ANTIGRAVITY-GEMINI?style=for-the-badge&amp;color=10b981" alt="License">
+  <img src="https://img.shields.io/github/actions/workflow/status/bicknicktick/DEGENI-CLAUDE-ANTIGRAVITY-GEMINI/ci.yml?branch=main&amp;style=for-the-badge&amp;color=8b5cf6" alt="Build Status">
+</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/DEGENI-v1.0.0-06b6d4?style=for-the-badge" alt="DEGENI">
   <img src="https://img.shields.io/badge/by-BITZY.ID-10b981?style=for-the-badge" alt="BITZY.ID">
@@ -18,172 +26,175 @@
 ```
 
 <p align="center">
-  <strong>🚀 Access Claude Sonnet 4.5 & Gemini 3 Pro FREE in your terminal!</strong>
+  <strong>🚀 Access Claude Sonnet 4.5 &amp; Gemini 3 Pro FREE in your terminal!</strong>
 </p>
 
 ---
 
-## ✨ What is DEGENI?
+## 📝 Description
 
-**DEGENI** adalah AI terminal tool yang memberikan akses **GRATIS** ke:
-
-- 🤖 **Claude Sonnet 4.5 Thinking** - Model AI terbaik untuk coding
-- 🌟 **Claude Opus 4.5 Thinking** - Model reasoning terkuat
-- 💎 **Gemini 3 Pro** - Model terbaru dari Google
-- ⚡ **Gemini 2.5 Flash** - Model super cepat
-
-**Tanpa biaya langganan!** Hemat $240-360/tahun dibanding Claude Pro.
+**DEGENI** is a terminal-based AI tool that provides free access to powerful Claude and Gemini models directly from your shell, with zero subscription costs. It wraps Google AI Pro and Antigravity-based Claude wrappers into a single CLI experience, complete with persistent sessions and a live web dashboard. Designed for developers and power users, DEGENI makes it easy to code, analyze, and experiment with state-of-the-art models from your own machine.
 
 ---
 
-## 🚀 Quick Start
+## ✨ Key Features
 
-### Method 1: Install from GitHub (Recommended)
+- 🆓 **100% Free access** to Google AI Pro and Claude wrappers (no monthly subscription)
+- 🤖 **Multi-model support**: Claude Sonnet/Opus 4.5 Thinking + Gemini 3 Pro / 2.5 Pro / 2.5 Flash
+- 💬 **Interactive chat mode** with session history and timestamps
+- ⚡ **Quick one-off questions** directly from the CLI
+- 💾 **Session management**: save, load, list, and clear conversations
+- 📊 **Live dashboard** with real-time server status, logs, account list, and model switching
+- 🔄 **Auto-balance across multiple accounts** to reduce rate limiting
+- 🎛️ **1-click actions** from the dashboard (restart proxy, toggle accounts, switch models)
+- 📦 **Portable install**: simple shell scripts, no heavy dependencies beyond Node.js and CLI tools
+- 🔐 **Local-only traffic** with credentials stored on your machine
+
+---
+
+## 🖼️ Screenshots
+
+> Example layout of the DEGENI dashboard and terminal usage.
+
+| ![Screenshot 1](screenshots/screen1.png) | ![Screenshot 2](screenshots/screen2.png) | ![Screenshot 3](screenshots/screen3.png) |
+|:---:|:---:|:---:|
+| *Terminal chat with Claude + Gemini* | *Live dashboard with real-time stats* | *Session management and logs view* |
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the repository (recommended)
 
 ```bash
-# 1. Clone repository
 git clone https://github.com/bicknicktick/DEGENI-CLAUDE-ANTIGRAVITY-GEMINI.git
 cd DEGENI-CLAUDE-ANTIGRAVITY-GEMINI
+```
 
-# 2. Run installer
+### 2. Run the installer
+
+```bash
 bash install.sh
 ```
 
-### Method 2: Install from Archive
+### 3. Reload your shell (one time only)
 
 ```bash
-# 1. Extract & run installer
-tar -xzf DEGENI-by-BITZY.tar.gz
-cd DEGENI
-bash install.sh
+# Bash / Zsh
+source ~/.bashrc   # or source ~/.zshrc
 ```
 
-### After Installation (Both Methods)
+### 4. Add a Google AI account (required)
 
 ```bash
-# 1. Reload shell (REQUIRED - only once)
-source ~/.bashrc
-
-# 2. Add Google AI account (REQUIRED - needs browser)
 degeni add
 # → Choose [1] Antigravity (recommended for Claude models)
 # → Open the URL shown in your browser
-# → Login with your Google account  
+# → Login with your Google account
 # → Authorize the app
-# → Copy the callback URL from browser
-# → Paste it in terminal
-
-# 3. Done! Start using AI
-degeni "hello world"
+# → Copy the callback URL from the browser
+# → Paste it back into the terminal
 ```
 
-### ⚠️ Important Notes
-
-| Step | Auto/Manual | Keterangan |
-|------|-------------|------------|
-| Install dependencies | ✅ Auto | Node.js, Claude CLI, CLIProxyAPI |
-| Copy DEGENI files | ✅ Auto | CLI tools, dashboard, sessions |
-| Start proxy server | ✅ Auto | Background service |
-| Reload shell | ⚡ Manual | `source ~/.bashrc` (sekali) |
-| Add Google account | ⚡ Manual | `degeni add` (butuh browser) |
-
-**Setelah setup awal, tinggal pakai `degeni` langsung!**
-
----
-
-## 🎯 Features
-
-| Feature | Description |
-|---------|-------------|
-| 🆓 **100% Free** | Gunakan Google AI Pro (gratis) |
-| 🤖 **Multi-Model** | Claude + Gemini dalam satu tool |
-| 💬 **Chat Mode** | Interactive seperti ChatGPT |
-| ⚡ **Quick Ask** | Tanya cepat tanpa masuk chat |
-| 💾 **Sessions** | Save & load chat history with timestamps |
-| 🔄 **Auto-Balance** | Load balance multiple akun |
-| 📊 **Live Dashboard** | Web UI real-time monitoring |
-| 🎛️ **1-Click Actions** | Switch model, toggle account |
-| 📦 **Portable** | Install sekali, pakai selamanya |
-
----
-
-## 💻 Commands
-
-### AI Chat
+### 5. Verify the installation
 
 ```bash
-# Quick question
+degeni "hello world"
+degeni status
+```
+
+> After this one-time setup, you can call `degeni` from anywhere in your terminal.
+
+---
+
+## 📦 Usage
+
+### Quick questions from the terminal
+
+```bash
+# Ask a one-off question (no interactive session)
 degeni "jelaskan docker dalam 3 kalimat"
 
-# Interactive chat mode
+# Ask in English
+degeni "Explain the difference between Claude Sonnet 4.5 and Gemini 3 Pro."
+```
+
+### Interactive chat mode
+
+```bash
+# Start an interactive session
 degeni chat
 ```
 
-### Session Commands (NEW!)
+Inside chat mode you can use:
 
 ```bash
-# In chat mode, use these commands:
 /sessions        # List all saved sessions
-/new [name]      # Start new session
+/new [name]      # Start new session with an optional name
 /load <number>   # Load session by number
 /history         # Show current session history
 /clear           # Clear all sessions
-/help            # Show help
+/help            # Show in-chat help
+```
 
-# Or via degeni CLI:
+The same operations are available via the CLI:
+
+```bash
 degeni sessions              # List sessions
 degeni session new "My Chat" # Create session
 degeni session load 1        # Load session #1
-degeni session delete 1      # Delete session
-degeni session clear         # Clear all
+degeni session delete 1      # Delete a session
+degeni session clear         # Clear all sessions
 ```
 
-### Troubleshooting (NEW!)
-
-```bash
-degeni diagnose     # 🔍 Diagnose all problems
-degeni fix          # Same as diagnose + auto-fix options
-
-# Checks:
-# [1] Proxy Server - online/offline
-# [2] Accounts - ada atau tidak
-# [3] Rate Limits - quota exceeded
-# [4] Auth Errors - token expired
-# [5] Suspended - akun di-suspend
-# [6] API Connection - responding atau tidak
-
-# Auto-fix options jika ada masalah!
-```
-
-### Account Management
+### Account management
 
 ```bash
 degeni              # Interactive menu
-degeni list         # List accounts
-degeni add          # Add new account
-degeni disable      # Disable account
-degeni enable       # Enable account
-degeni restart      # Restart & unsuspend
-degeni test         # Test accounts
+degeni list         # List all configured accounts
+degeni add          # Add a new account
+degeni disable      # Disable an account
+degeni enable       # Enable an account
+degeni restart      # Restart & try to unsuspend accounts
+degeni test         # Test all accounts
 ```
 
-### Model & Dashboard
+### Model and dashboard commands
 
 ```bash
-degeni model        # Switch AI model
-degeni dash         # Open live dashboard
-degeni status       # System status
-degeni errors       # View error logs
+degeni model        # Switch AI model (Claude / Gemini variants)
+degeni dash         # Open live dashboard in your browser
+degeni status       # Show system status
+degeni errors       # View recent error logs
 ```
+
+### Troubleshooting helpers
+
+```bash
+# Diagnose common issues
+degeni diagnose
+
+# Diagnose + interactive auto-fix options
+degeni fix
+```
+
+Checks include:
+
+- Proxy server availability
+- Account presence and status
+- Rate limits and quota issues
+- Authentication errors (expired tokens)
+- Suspended accounts
+- API connectivity
 
 ---
 
 ## 🌐 Live Dashboard
 
-Dashboard dengan **real-time data** - bukan dummy!
+Dashboard dengan **real-time data** – bukan dummy!
 
 ```bash
-# Start dashboard
+# Start dashboard services
 ~/DEGENI/start-dashboard.sh
 
 # Open in browser
@@ -193,7 +204,7 @@ Dashboard dengan **real-time data** - bukan dummy!
 ### Dashboard Features
 
 | Feature | Action | Status |
-|---------|--------|--------|
+|--------|--------|--------|
 | **Server Status** | Auto-refresh | ✅ LIVE |
 | **Account List** | Click to toggle | ✅ LIVE |
 | **Switch Model** | Click to switch | ✅ LIVE |
@@ -201,7 +212,7 @@ Dashboard dengan **real-time data** - bukan dummy!
 | **Test Connection** | Click button | ✅ LIVE |
 | **System Logs** | Auto-refresh 5s | ✅ LIVE |
 
-**Semua aksi tinggal KLIK - langsung execute!**
+**Semua aksi tinggal KLIK – langsung execute!**
 
 ---
 
@@ -211,7 +222,7 @@ Dashboard dengan **real-time data** - bukan dummy!
 
 | Model | Best For |
 |-------|----------|
-| `gemini-claude-sonnet-4-5-thinking` ⭐ | Coding, Analysis |
+| `gemini-claude-sonnet-4-5-thinking` ⭐ | Coding, analysis |
 | `gemini-claude-opus-4-5-thinking` | Complex reasoning |
 | `gemini-claude-sonnet-4-5` | General tasks |
 
@@ -219,31 +230,44 @@ Dashboard dengan **real-time data** - bukan dummy!
 
 | Model | Best For |
 |-------|----------|
-| `gemini-3-pro-preview` | All-purpose, Latest |
-| `gemini-2.5-pro` | Long context |
-| `gemini-2.5-flash` | Quick tasks |
+| `gemini-3-pro-preview` | All-purpose, latest model |
+| `gemini-2.5-pro` | Long-context tasks |
+| `gemini-2.5-flash` | Quick, low-latency tasks |
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-```
+```bash
 ~/DEGENI/
 ├── install.sh           # One-shot installer
 ├── start-dashboard.sh   # Start live dashboard
 ├── bin/
-│   ├── degeni           # Main CLI tool
+│   ├── degeni           # Main CLI tool entrypoint
 │   ├── ai               # AI wrapper with session support
 │   ├── degeni-api       # Backend API server
 │   └── degeni-session   # Session manager
 ├── ui/
-│   ├── dashboard.html   # Live dashboard
+│   ├── dashboard.html   # Live dashboard UI
 │   └── favicon.svg      # Dashboard icon
 ├── sessions/            # Saved chat sessions (JSON)
-├── config/
-├── logs/
-└── README.md
+├── config/              # Configuration and runtime data
+├── logs/                # Application and proxy logs
+└── README.md            # Project documentation
 ```
+
+---
+
+## 🛠️ Technologies
+
+Main technologies and services used by DEGENI:
+
+- ![Shell](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash&logoColor=white) – installer and CLI scripts
+- ![Node.js](https://img.shields.io/badge/Node.js-Backend-339933?logo=node.js&logoColor=white) – API server and integrations
+- ![HTML](https://img.shields.io/badge/HTML-Dashboard-E34F26?logo=html5&logoColor=white) – web dashboard UI
+- ![Claude](https://img.shields.io/badge/Claude-Sonnet%204.5-8b5cf6) – coding and reasoning model
+- ![Gemini](https://img.shields.io/badge/Gemini-3%20Pro-f59e0b) – latest Google Gemini model family
+- ![Google AI](https://img.shields.io/badge/Google%20AI-Pro-4285F4?logo=google&logoColor=white) – underlying AI service
 
 ---
 
@@ -267,7 +291,7 @@ Dashboard menggunakan backend API untuk real-time data:
 
 ---
 
-## 🔧 Troubleshooting
+## 🧩 Troubleshooting
 
 ### Error: `auth_unavailable`
 
@@ -292,35 +316,34 @@ degeni model  # Select: gemini-3-pro-preview
 
 ---
 
-## 💰 Cost Comparison
+## 🤝 Contributing
 
-| Service | Monthly | Yearly |
-|---------|---------|--------|
-| Claude Pro | $20-30 | $240-360 |
-| ChatGPT Plus | $20 | $240 |
-| **DEGENI** | **$0** | **$0** |
+Contributions, bug reports, and feature requests are very welcome.
 
-**You save: $240-360/year!** 🎉
+1. Fork the repository
+2. Create a feature branch:  
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Make your changes and add tests if applicable
+4. Commit with a descriptive message:
+   ```bash
+   git commit -m "feat: add amazing feature"
+   ```
+5. Push your branch:
+   ```bash
+   git push origin feature/my-feature
+   ```
+6. Open a Pull Request describing your changes, motivation, and any relevant context
+
+Please try to follow the existing coding style and keep commits focused and atomic.
 
 ---
 
-## 📋 Requirements
+## 📄 License
 
-- ✅ Linux (Ubuntu/Debian) atau macOS
-- ✅ Google AI Pro account (free)
-- ✅ Internet connection
-
-**Auto-installed:**
-- Node.js, Claude CLI, CLIProxyAPI
-
----
-
-## 🔐 Security
-
-- 🔒 All traffic local (localhost only)
-- 🔒 Credentials in `~/.cli-proxy-api/`
-- 🔒 No third-party data sharing
-- 🔒 Open source & auditable
+This project is licensed under the **MIT License**.  
+See the `LICENSE` file in this repository for full license text.
 
 ---
 
@@ -356,8 +379,6 @@ Jika DEGENI bermanfaat, dukung pengembangan dengan donasi:
 <p align="center">
   <sub>Made with ❤️ in Indonesia</sub>
 </p>
-
----
 
 <p align="center">
   <img src="https://img.shields.io/badge/Free-Forever-10b981?style=flat-square" alt="Free">
